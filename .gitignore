@@ -2,3 +2,7 @@
 dados/
 dados/raw/
 dados/trusted/
+terraform/*
+!terraform/main.tf
+terraform.tfstate
+.terraform.lock.hcl 
