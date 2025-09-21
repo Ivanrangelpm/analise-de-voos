@@ -6,7 +6,7 @@ import os
 # ====================== #
 
 regiao = 'us-east-1'
-nome_bucket_raw = 'raw-analise-voos-grupo2'
+nome_bucket_raw = 'trusted-analise-voos-grupo02'
 
 client = boto3.client('s3', region_name=regiao)
 
@@ -15,7 +15,6 @@ pastas_para_enviar = {
     "dados/raw/Dados Atividade/": "dados_atividade/",
     "dados/raw/Dados Voos Atualizados/": "dados_voos_atualizados/"
 }
-
 # ====================== #
 #      Functions         #
 # ====================== #
@@ -38,8 +37,8 @@ def subir_arquivo(bucket_name, file_path_local, file_path_s3):
 #        Main            #
 # ====================== #
 
-if __name__ == "__main__":
-    for pasta_local, pasta_s3 in pastas_para_enviar.items():
+
+for pasta_local, pasta_s3 in pastas_para_enviar.items():
         # Verifica se o diretório local existe
         if not os.path.isdir(pasta_local):
             print(f"Aviso: Diretório local '{pasta_local}' não encontrado. Pulando...")
@@ -56,4 +55,4 @@ if __name__ == "__main__":
                 # Chama a função para subir o arquivo
                 subir_arquivo(nome_bucket_raw, caminho_local_completo, caminho_s3_completo)
 
-    print("\nProcesso de upload concluído.")
+print("\nProcesso de upload concluído.")
