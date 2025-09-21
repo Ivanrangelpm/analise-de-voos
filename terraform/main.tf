@@ -1,8 +1,4 @@
-# Crie este arquivo "empty_file" no mesmo diretório
-# com o conteúdo vazio. O Terraform precisa dele para
-# criar os "diretórios".
 
-# Código corrigido
 terraform {
   required_providers {
     aws = {
@@ -32,7 +28,7 @@ resource "aws_s3_object" "raw_pastas" {
 }
 
 resource "aws_s3_bucket" "trusted" {
-  bucket = "trusted-analise-voos-grupo02"
+  bucket = "trusted-analise-voos-grupo2"
 }
 
 # Usando o recurso aws_s3_object
