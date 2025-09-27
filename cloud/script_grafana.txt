@@ -27,3 +27,4 @@ echo "✅ Grafana instalado com sucesso!"
 echo "Acesse o IP público na porta 3000. Ex: http://SEU_IP_PUBLICO:3000"
 echo "Usuário padrão: admin"
 echo "Senha padrão: admin (você deverá trocá-la no primeiro login)"
+
