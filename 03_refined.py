@@ -140,6 +140,12 @@ combinacoes_unicas
 
 df_rec = df_rec.dropna(subset=['SIGLA ICAO EMPRESA AEREA'])
 
+top_5_empresas = df_final['EMPRESA AEREA'].value_counts().nlargest(5).index
+df_top5 = df_final[df_final['EMPRESA AEREA'].isin(top_5_empresas)]
+dados_para_grafico = df_top5.groupby(['CLUSTER_HORA', 'EMPRESA AEREA']).size().reset_index(name='total_voos')
+
+dados_para_grafico.to_csv('dados/refined/voos_clusterHora_sep_por_empresa.csv', index=False)
+
 df_final.to_csv('dados/refined/voos_sp_rj_2406_2412.csv', index=False)
 
 df_rec.to_csv('dados/refined/reclamacoes_2406_2412.csv', index=False)
