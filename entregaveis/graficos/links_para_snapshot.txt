@@ -1,0 +1,4 @@
+https://snapshots.raintank.io/dashboard/snapshot/bY05HVZ06oHxy6UOyQqPVYbTKH4Nih4j
+
+Por algum motivo o segundo snapshot só armazena gráficos de linha de uma única empresa, favor conferir imagem dos dois últimos gráficos nessa pasta
+https://snapshots.raintank.io/dashboard/snapshot/JbEgb0TEvCMQA955PHGKa3OK4LZsBdTp
